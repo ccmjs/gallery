@@ -1,0 +1,81 @@
+/**
+ * @overview Default Layout of <i>ccm</i>-based Web Component for a Gallery with a 5-Star Rating.
+ * @author André Kless <andre.kless@web.de> 2025
+ * @license The MIT License (MIT)
+ */
+
+#element {
+  --border: lightgray;
+  --bg: whitesmoke;
+  --color: black;
+  --star: gold;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--color);
+}
+
+#items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em;
+
+  & article {
+    margin: 0.5em;
+    border: 1px solid var(--border);
+    border-radius: 0.25em;
+    background-color: var(--bg);
+
+    & header {
+      border-bottom: 1px solid var(--border);
+
+      & img {
+        width: 20em;
+        display: block;
+      }
+    }
+
+    & main {
+      padding: 1em;
+    }
+
+    & footer {
+      padding: 0 1em 1em;
+      display: flex;
+      justify-content: space-between;
+
+      & .own:hover {
+        cursor: pointer;
+
+        & svg {
+          fill: goldenrod;
+        }
+      }
+
+      & .average {
+        display: flex;
+
+        & .amount {
+          margin-left: 0.25em;
+        }
+
+        & .amount::before {
+          content: '(';
+        }
+
+        & .amount::after {
+          content: ')';
+        }
+      }
+
+      & .rating {
+        display: flex;
+
+        & svg {
+          height: 100%;
+          fill: var(--star);
+        }
+      }
+    }
+  }
+}
