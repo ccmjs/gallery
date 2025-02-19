@@ -1,0 +1,55 @@
+/**
+ * @overview default layout of ccmjs-based web component for user authentication
+ * @author Tea Kless <tea.kless@web.de.de> 2018
+ * @author André Kless <andre.kless@web.de.de> 2018-2019
+ * @license The MIT License (MIT)
+ */
+
+#user {
+  display: flex;
+  font-size: medium;
+  font-weight: normal;
+}
+
+#user img {
+  border-radius: 50%;
+}
+
+#user span {
+  padding-left: 0.2em;
+  padding-top: 0.2em;
+}
+
+#logged_in,
+#logged_out {
+  display: inline-flex;
+  align-items: flex-end;
+  margin: 0;
+}
+
+#logged_in #button {
+  margin-left: 0.5em;
+}
+
+.glyphicon {
+  margin-right: 0.4em;
+}
+
+#login-form #loginbox {
+  margin-top: 50px;
+}
+#login-form .panel-body {
+  padding-top: 30px
+}
+
+#login-form .input-group {
+  margin-bottom: 25px;
+}
+
+#btn-abort {
+  float: right;
+}
+
+.well-sm {
+  padding: 3px !important;
+}
