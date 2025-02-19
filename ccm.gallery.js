@@ -81,7 +81,7 @@ ccm.files['ccm.gallery.js'] = {
       for (let i = 1; i <= 5; i++) {
         const star = rating >= i ? 'filled' : rating >= i - 0.5 ? 'half' : 'empty';
         const star_elem = this.ccm.helper.html(this.html['star_' + star]);
-        star_elem.addEventListener('click', () => this.onRating(item, i));
+        item && star_elem.addEventListener('click', () => this.onRating(item, i));
         elem.appendChild(star_elem);
       }
     };
@@ -89,6 +89,6 @@ ccm.files['ccm.gallery.js'] = {
       item.ratings[this.user.getValue().key] = stars;
       await this.data.store.set(data);
       await this.start();
-    }
+    };
   }
 };
